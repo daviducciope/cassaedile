@@ -1,7 +1,9 @@
 {
   "/page": "app/page.js",
-  "/wizard-nuova-impresa/page": "app/wizard-nuova-impresa/page.js",
-  "/modulistica/page": "app/modulistica/page.js",
+  "/assistenza/page": "app/assistenza/page.js",
+  "/documenti/page": "app/documenti/page.js",
   "/area-riservata/page": "app/area-riservata/page.js",
-  "/lavoratori/page": "app/lavoratori/page.js"
+  "/lavoratori/page": "app/lavoratori/page.js",
+  "/consulenti/page": "app/consulenti/page.js",
+  "/modulistica/page": "app/modulistica/page.js"
 }

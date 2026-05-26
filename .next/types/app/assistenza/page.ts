@@ -1,8 +1,8 @@
-// File: /home/davide/Sviluppo/Progetti/cassaedile/app/wizard-nuova-impresa/page.tsx
-import * as entry from '../../../../app/wizard-nuova-impresa/page.js'
+// File: /home/davide/Sviluppo/Progetti/cassaedile/app/assistenza/page.tsx
+import * as entry from '../../../../app/assistenza/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/wizard-nuova-impresa/page.js')
+type TEntry = typeof import('../../../../app/assistenza/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }

@@ -1,9 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { Bell, BriefcaseBusiness, CheckCircle2, FileText, LockKeyhole, MessageSquare, TriangleAlert } from "lucide-react";
+import {
+  Bell,
+  BriefcaseBusiness,
+  CheckCircle2,
+  FileText,
+  LifeBuoy,
+  LockKeyhole,
+  MessageSquare,
+  PlusCircle,
+  TriangleAlert,
+  UploadCloud
+} from "lucide-react";
 import { notifications, practices } from "@/data/demo";
-import { Badge, Button, Card, FieldLabel, Input } from "@/components/ui";
+import { Badge, Button, Card, FieldLabel, Input, LinkButton } from "@/components/ui";
 
 export function ReservedArea() {
   const [logged, setLogged] = useState(false);
@@ -14,9 +25,9 @@ export function ReservedArea() {
         <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary text-primary-foreground">
           <LockKeyhole className="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 className="mt-5 text-2xl font-bold">Accesso area riservata demo</h2>
+        <h2 className="mt-5 text-2xl font-bold">Accesso area riservata</h2>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Login simulato per mostrare dashboard, pratiche, notifiche e documenti disponibili.
+          Login simulato per mostrare dashboard, pratiche, notifiche e documenti disponibili nell'ambiente dimostrativo.
         </p>
         <div className="mt-6 grid gap-4">
           <div>
@@ -28,7 +39,7 @@ export function ReservedArea() {
             <Input className="mt-2" type="password" defaultValue="demo-demo" />
           </div>
           <Button type="button" onClick={() => setLogged(true)}>
-            Entra nella dashboard demo
+            Entra nella dashboard
           </Button>
         </div>
       </Card>
@@ -57,6 +68,31 @@ export function ReservedArea() {
           </Card>
         ))}
       </div>
+
+      <Card className="p-5">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
+          <div>
+            <h2 className="text-xl font-bold">Azioni rapide</h2>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Le operazioni piu richieste restano sempre raggiungibili dalla dashboard.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[560px]">
+            <LinkButton href="/documenti" variant="outline" className="w-full">
+              <UploadCloud className="h-4 w-4" aria-hidden="true" />
+              Carica documento
+            </LinkButton>
+            <LinkButton href="/wizard-nuova-impresa" className="w-full">
+              <PlusCircle className="h-4 w-4" aria-hidden="true" />
+              Apri nuova pratica
+            </LinkButton>
+            <LinkButton href="/assistenza" variant="secondary" className="w-full">
+              <LifeBuoy className="h-4 w-4" aria-hidden="true" />
+              Richiedi assistenza
+            </LinkButton>
+          </div>
+        </div>
+      </Card>
 
       <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
         <Card className="p-5">

@@ -33,7 +33,7 @@ export const services = [
   {
     title: "Rimborsi e prestazioni",
     audience: "Lavoratori",
-    description: "Accesso rapido alle richieste di rimborso, contributi e prestazioni integrative.",
+    description: "Trova il rimborso, il contributo o il documento da richiedere senza passaggi inutili.",
     href: "/lavoratori"
   },
   {
@@ -45,7 +45,7 @@ export const services = [
   {
     title: "Apri richiesta assistenza",
     audience: "Tutti",
-    description: "Invia una domanda e segui lo stato della richiesta in area riservata demo.",
+    description: "Invia una domanda e segui lo stato della richiesta nell'area riservata.",
     href: "/assistenza"
   }
 ];
@@ -285,7 +285,7 @@ export const news = [
     excerpt: "Aggiornate le risposte frequenti su ferie, rimborsi e deleghe operative."
   },
   {
-    title: "Area riservata demo con pratiche e notifiche",
+    title: "Area riservata con pratiche e notifiche",
     date: "2026-04-12",
     category: "Piattaforma",
     excerpt: "La dashboard mostra stato pratiche, documenti disponibili e richieste assistenza."
@@ -300,7 +300,7 @@ export const news = [
     title: "Canale assistenza digitale in anteprima",
     date: "2026-03-14",
     category: "Assistenza",
-    excerpt: "Il prototipo simula apertura richiesta, presa in carico e consultazione stato."
+    excerpt: "L'ambiente dimostrativo simula apertura richiesta, presa in carico e consultazione stato."
   }
 ];
 

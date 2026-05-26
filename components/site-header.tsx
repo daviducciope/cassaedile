@@ -28,7 +28,7 @@ export function SiteHeader() {
           </span>
           <span className="min-w-0">
             <span className="block truncate text-base font-bold leading-tight">Cassa Edile Digitale</span>
-            <span className="block truncate text-xs text-muted-foreground">Prototipo piattaforma servizi</span>
+            <span className="block truncate text-xs text-muted-foreground">Ambiente dimostrativo</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">

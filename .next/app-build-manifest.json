@@ -11,25 +11,35 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/wizard-nuova-impresa/page": [
+    "/assistenza/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/wizard-nuova-impresa/page.js"
+      "static/chunks/app/assistenza/page.js"
+    ],
+    "/area-riservata/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/area-riservata/page.js"
+    ],
+    "/documenti/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/documenti/page.js"
     ],
     "/modulistica/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/modulistica/page.js"
     ],
+    "/consulenti/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/consulenti/page.js"
+    ],
     "/lavoratori/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/lavoratori/page.js"
-    ],
-    "/area-riservata/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/area-riservata/page.js"
     ]
   }
 }

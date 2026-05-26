@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "Cassa Edile Digitale",
-  description: "Prototipo di piattaforma digitale modulare per Casse Edili."
+  description: "Demo riservata di piattaforma digitale modulare per Casse Edili."
 };
 
 export default function RootLayout({

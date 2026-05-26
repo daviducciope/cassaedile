@@ -4,12 +4,12 @@ export default function LavoratoriPage() {
   return (
     <AudiencePage
       audience="Lavoratori"
-      title="Prestazioni e documenti per lavoratori"
-      description="Accesso rapido a rimborsi, ferie, gratifica, posizione personale e richieste di supporto."
+      title="Trova rimborsi, ferie, documenti e richieste in pochi click"
+      description="Un percorso semplice per capire cosa chiedere, quale modulo usare e come parlare con lo sportello."
       highlights={[
-        "Trova moduli per rimborsi e prestazioni",
-        "Consulta guide su ferie, malattia e infortunio",
-        "Segui lo stato delle richieste in dashboard demo",
+        "Chiedi un rimborso o un contributo",
+        "Vedi informazioni su ferie e gratifica",
+        "Scarica documenti personali e moduli",
         "Prenota un contatto con lo sportello lavoratori"
       ]}
     />
