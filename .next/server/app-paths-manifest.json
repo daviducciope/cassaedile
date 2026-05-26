@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/wizard-nuova-impresa/page": "app/wizard-nuova-impresa/page.js",
+  "/modulistica/page": "app/modulistica/page.js",
+  "/area-riservata/page": "app/area-riservata/page.js",
+  "/lavoratori/page": "app/lavoratori/page.js"
+}
