@@ -47,7 +47,7 @@ export function AppointmentBooking() {
             </Select>
           </div>
           <Button type="button" onClick={() => setConfirmed(true)}>
-            Conferma prenotazione demo
+            Conferma prenotazione
           </Button>
         </div>
       </Card>
@@ -62,7 +62,7 @@ export function AppointmentBooking() {
             ["Ufficio", office],
             ["Giorno", day],
             ["Orario", slot],
-            ["Modalita", "Appuntamento presso sportello o videochiamata demo"]
+            ["Modalità", "Appuntamento presso sportello o videochiamata"]
           ].map(([label, value]) => (
             <div key={label} className="rounded-md border bg-white p-4">
               <p className="text-xs font-semibold uppercase text-muted-foreground">{label}</p>
@@ -72,7 +72,7 @@ export function AppointmentBooking() {
         </div>
         {confirmed ? (
           <p className="mt-5 rounded-md border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold text-emerald-800">
-            Appuntamento demo confermato. In produzione partirebbe una notifica email o calendario.
+            Appuntamento confermato. In produzione partirebbe una notifica email o calendario.
           </p>
         ) : null}
       </Card>

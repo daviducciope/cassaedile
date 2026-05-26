@@ -17,7 +17,7 @@ import { notifications, practices } from "@/data/demo";
 import { Badge, Button, Card, FieldLabel, Input, LinkButton } from "@/components/ui";
 
 export function ReservedArea() {
-  const [logged, setLogged] = useState(false);
+  const [logged, setLogged] = useState(true);
 
   if (!logged) {
     return (
@@ -25,18 +25,18 @@ export function ReservedArea() {
         <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary text-primary-foreground">
           <LockKeyhole className="h-5 w-5" aria-hidden="true" />
         </div>
-        <h2 className="mt-5 text-2xl font-bold">Accesso area riservata</h2>
+        <h2 className="mt-5 text-2xl font-bold">Accesso dimostrativo all'area riservata</h2>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Login simulato per mostrare dashboard, pratiche, notifiche e documenti disponibili nell'ambiente dimostrativo.
+          Inserisci le credenziali di anteprima per mostrare dashboard, pratiche, notifiche e documenti disponibili.
         </p>
         <div className="mt-6 grid gap-4">
           <div>
             <FieldLabel>Email</FieldLabel>
-            <Input className="mt-2" defaultValue="impresa.demo@cassaedile.test" />
+            <Input className="mt-2" defaultValue="anteprima@cassaedile.it" />
           </div>
           <div>
             <FieldLabel>Password</FieldLabel>
-            <Input className="mt-2" type="password" defaultValue="demo-demo" />
+            <Input className="mt-2" type="password" defaultValue="anteprima" />
           </div>
           <Button type="button" onClick={() => setLogged(true)}>
             Entra nella dashboard
@@ -98,7 +98,7 @@ export function ReservedArea() {
         <Card className="p-5">
           <div className="flex items-center justify-between gap-3">
             <h2 className="text-xl font-bold">Stato pratiche</h2>
-            <Badge tone="amber">Demo impresa</Badge>
+            <Badge tone="amber">Profilo impresa</Badge>
           </div>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-separate border-spacing-y-2 text-left text-sm">

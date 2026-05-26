@@ -7,7 +7,7 @@ export default function AssistenzaPage() {
       <SectionHeader
         eyebrow="Assistenza"
         title="Apertura ticket e stato richiesta"
-        description="Un flusso finto ma completo per mostrare come l'utente apre una richiesta e ne segue lo stato."
+        description="Un flusso dimostrativo completo per mostrare apertura, presa in carico e gestione delle richieste."
       />
       <div className="mt-8">
         <AssistanceFlow />

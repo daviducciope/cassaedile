@@ -6,12 +6,12 @@ import { Badge, Button, Card } from "@/components/ui";
 
 const steps = [
   {
-    title: "L'impresa ha gia una posizione attiva?",
-    options: ["No, deve iscriversi", "Si, ma deve aggiornare i dati", "Non lo so"]
+    title: "L'impresa ha già una posizione attiva?",
+    options: ["No, deve iscriversi", "Sì, ma deve aggiornare i dati", "Non lo so"]
   },
   {
     title: "Deve aprire o gestire un cantiere?",
-    options: ["Si, nuovo cantiere", "Si, cantiere gia avviato", "No, solo posizione aziendale"]
+    options: ["Sì, nuovo cantiere", "Sì, cantiere già avviato", "No, solo posizione aziendale"]
   },
   {
     title: "Chi seguira le pratiche?",
@@ -35,8 +35,8 @@ export function WizardNuovaImpresa() {
     return [
       needsRegistration ? "Compilare modulo iscrizione nuova impresa" : "Verificare dati anagrafici e posizione attiva",
       hasConsultant ? "Allegare delega consulente aziendale" : "Preparare credenziali referente impresa",
-      "Consultare scheda DURC e regolarita contributiva",
-      "Prenotare appuntamento con sportello imprese se la pratica e urgente"
+      "Consultare scheda DURC e regolarità contributiva",
+      "Prenotare appuntamento con sportello imprese se la pratica è urgente"
     ];
   }, [answers]);
 

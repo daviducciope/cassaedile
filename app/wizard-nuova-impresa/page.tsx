@@ -7,7 +7,7 @@ export default function WizardPage() {
       <SectionHeader
         eyebrow="Percorso guidato"
         title="Cosa deve fare una nuova impresa?"
-        description="Un wizard demo che raccoglie poche informazioni e restituisce una lista di azioni operative consigliate."
+        description="Un percorso dimostrativo che raccoglie poche informazioni e restituisce una lista di azioni operative consigliate."
       />
       <div className="mt-8">
         <WizardNuovaImpresa />

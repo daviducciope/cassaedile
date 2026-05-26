@@ -8,7 +8,7 @@ export default function NewsPage() {
       <SectionHeader
         eyebrow="News e normative"
         title="Aggiornamenti, circolari e comunicazioni"
-        description="Contenuti demo organizzati come se arrivassero da un CMS redazionale."
+        description="Contenuti organizzati come se arrivassero da un CMS redazionale."
       />
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {news.map((item) => (

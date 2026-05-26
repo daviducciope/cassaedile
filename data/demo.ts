@@ -19,15 +19,15 @@ export const services = [
     href: "/wizard-nuova-impresa"
   },
   {
-    title: "DURC e regolarita",
+    title: "DURC e regolarità",
     audience: "Imprese",
     description: "Informazioni operative su verifica, documenti richiesti e stato pratica.",
     href: "/documenti"
   },
   {
-    title: "Congruita manodopera",
+    title: "Congruità manodopera",
     audience: "Consulenti",
-    description: "Schede e moduli per controllare le pratiche di congruita nei cantieri.",
+    description: "Schede e moduli per controllare le pratiche di congruità nei cantieri.",
     href: "/documenti"
   },
   {
@@ -63,21 +63,21 @@ export const documents: DemoDocument[] = [
   },
   {
     id: "doc-002",
-    title: "Guida DURC e regolarita contributiva",
+    title: "Guida DURC e regolarità contributiva",
     category: "DURC",
     audience: ["Imprese", "Consulenti"],
-    description: "Scheda operativa su regolarita, scadenze e documentazione collegata.",
-    tags: ["durc", "regolarita", "versamenti"],
+    description: "Scheda operativa su regolarità, scadenze e documentazione collegata.",
+    tags: ["durc", "regolarità", "versamenti"],
     updatedAt: "2026-05-12",
     status: "Nuovo"
   },
   {
     id: "doc-003",
-    title: "Dichiarazione congruita cantiere",
-    category: "Congruita",
+    title: "Dichiarazione congruità cantiere",
+    category: "Congruità",
     audience: ["Imprese", "Consulenti"],
-    description: "Modulo demo per la verifica di congruita della manodopera.",
-    tags: ["congruita", "cantiere", "manodopera"],
+    description: "Modulo dimostrativo per la verifica di congruità della manodopera.",
+    tags: ["congruità", "cantiere", "manodopera"],
     updatedAt: "2026-04-22",
     status: "Aggiornato"
   },
@@ -106,7 +106,7 @@ export const documents: DemoDocument[] = [
     title: "Denuncia mensile manodopera occupata",
     category: "Denunce",
     audience: ["Imprese", "Consulenti"],
-    description: "Schema dati e istruzioni per la denuncia mensile demo.",
+    description: "Schema dati e istruzioni per la denuncia mensile dimostrativa.",
     tags: ["denuncia", "mensile", "manodopera"],
     updatedAt: "2026-04-30",
     status: "In revisione"
@@ -116,7 +116,7 @@ export const documents: DemoDocument[] = [
     title: "Versamenti contributivi e scadenze",
     category: "Contributi",
     audience: ["Imprese", "Consulenti"],
-    description: "Calendario e modalita di versamento per contributi e accantonamenti.",
+    description: "Calendario e modalità di versamento per contributi e accantonamenti.",
     tags: ["versamenti", "contributi", "scadenze"],
     updatedAt: "2026-05-02",
     status: "Aggiornato"
@@ -136,7 +136,7 @@ export const documents: DemoDocument[] = [
     title: "Richiesta attestazione versamenti",
     category: "Contributi",
     audience: ["Imprese", "Consulenti"],
-    description: "Richiesta certificazione dei versamenti presenti negli archivi demo.",
+    description: "Richiesta certificazione dei versamenti presenti negli archivi dimostrativi.",
     tags: ["attestazione", "versamenti", "certificato"],
     updatedAt: "2026-03-05",
     status: "Aggiornato"
@@ -156,7 +156,7 @@ export const documents: DemoDocument[] = [
     title: "Richiesta consultazione posizione lavoratore",
     category: "Posizione personale",
     audience: ["Lavoratori"],
-    description: "Accesso ai dati demo su periodi lavorati, versamenti e prestazioni.",
+    description: "Accesso ai dati dimostrativi su periodi lavorati, versamenti e prestazioni.",
     tags: ["posizione", "lavoratore", "storico"],
     updatedAt: "2026-04-16",
     status: "Nuovo"
@@ -186,7 +186,7 @@ export const documents: DemoDocument[] = [
     title: "Circolare aliquote contributive",
     category: "Normativa",
     audience: ["Imprese", "Consulenti"],
-    description: "Riepilogo demo di aliquote, decorrenze e principali novita operative.",
+    description: "Riepilogo dimostrativo di aliquote, decorrenze e principali novità operative.",
     tags: ["aliquote", "contributi", "circolare"],
     updatedAt: "2026-05-18",
     status: "Nuovo"
@@ -196,7 +196,7 @@ export const documents: DemoDocument[] = [
     title: "Richiesta certificato iscrizione",
     category: "Certificati",
     audience: ["Imprese"],
-    description: "Domanda per ottenere attestazione di iscrizione all'ente demo.",
+    description: "Domanda per ottenere attestazione di iscrizione all'ente.",
     tags: ["certificato", "iscrizione", "impresa"],
     updatedAt: "2026-01-14",
     status: "Aggiornato"
@@ -206,7 +206,7 @@ export const documents: DemoDocument[] = [
     title: "Manuale area riservata imprese",
     category: "Guide",
     audience: ["Imprese", "Consulenti"],
-    description: "Guida demo all'uso di pratiche, notifiche, documenti e richieste.",
+    description: "Guida all'uso di pratiche, notifiche, documenti e richieste.",
     tags: ["area riservata", "manuale", "dashboard"],
     updatedAt: "2026-05-01",
     status: "Aggiornato"
@@ -216,7 +216,7 @@ export const documents: DemoDocument[] = [
     title: "Domanda anticipo prestazione",
     category: "Prestazioni",
     audience: ["Lavoratori"],
-    description: "Richiesta demo per anticipo di una prestazione in fase di liquidazione.",
+    description: "Richiesta dimostrativa per anticipo di una prestazione in fase di liquidazione.",
     tags: ["anticipo", "prestazione", "liquidazione"],
     updatedAt: "2026-03-12",
     status: "In revisione"
@@ -236,7 +236,7 @@ export const documents: DemoDocument[] = [
     title: "Privacy e trattamento dati utenti",
     category: "Privacy",
     audience: ["Imprese", "Lavoratori", "Consulenti"],
-    description: "Informativa demo per servizi digitali, modulistica e area riservata.",
+    description: "Informativa per servizi digitali, modulistica e area riservata.",
     tags: ["privacy", "dati", "servizi digitali"],
     updatedAt: "2026-05-06",
     status: "Aggiornato"
@@ -270,10 +270,10 @@ export const news = [
     title: "Sportello digitale: nuove fasce per appuntamenti",
     date: "2026-05-09",
     category: "Appuntamenti",
-    excerpt: "La prenotazione demo consente di selezionare ufficio, data e fascia oraria."
+    excerpt: "La prenotazione consente di selezionare ufficio, data e fascia oraria."
   },
   {
-    title: "Ricerca documentale: contenuti su DURC e congruita",
+    title: "Ricerca documentale: contenuti su DURC e congruità",
     date: "2026-04-29",
     category: "Documenti",
     excerpt: "Le schede informative sono state organizzate per parole chiave e pubblico."
@@ -310,20 +310,20 @@ export const faqs = [
     answer: "L'impresa deve compilare la domanda di iscrizione, indicare i dati anagrafici e contributivi, allegare la documentazione richiesta e attendere la verifica della posizione."
   },
   {
-    question: "Dove posso verificare la regolarita contributiva per il DURC?",
-    answer: "La sezione documenti raccoglie guide, moduli e schede operative su versamenti, scadenze e regolarita contributiva. La richiesta formale segue i canali indicati dalla normativa vigente."
+    question: "Dove posso verificare la regolarità contributiva per il DURC?",
+    answer: "La sezione documenti raccoglie guide, moduli e schede operative su versamenti, scadenze e regolarità contributiva. La richiesta formale segue i canali indicati dalla normativa vigente."
   },
   {
-    question: "Cosa significa congruita della manodopera?",
-    answer: "La congruita verifica che il costo della manodopera dichiarato sia coerente con il valore e la tipologia dei lavori edili svolti nel cantiere."
+    question: "Cosa significa congruità della manodopera?",
+    answer: "La congruità verifica che il costo della manodopera dichiarato sia coerente con il valore e la tipologia dei lavori edili svolti nel cantiere."
   },
   {
     question: "Quando va inviata la denuncia mensile?",
     answer: "La denuncia mensile deve essere trasmessa entro le scadenze stabilite dalla Cassa Edile competente, indicando lavoratori occupati, ore, imponibili e dati richiesti per il periodo."
   },
   {
-    question: "Un consulente puo gestire le pratiche per conto dell'impresa?",
-    answer: "Si, se l'impresa conferisce una delega valida. La delega consente al consulente di seguire pratiche, modulistica, comunicazioni e richieste operative."
+    question: "Un consulente può gestire le pratiche per conto dell'impresa?",
+    answer: "Sì, se l'impresa conferisce una delega valida. La delega consente al consulente di seguire pratiche, modulistica, comunicazioni e richieste operative."
   },
   {
     question: "Come posso richiedere un rimborso o una prestazione?",
@@ -339,7 +339,7 @@ export const faqs = [
   },
   {
     question: "Posso prenotare un appuntamento con lo sportello?",
-    answer: "Si, la sezione appuntamenti permette di scegliere ufficio, giorno e fascia oraria per ricevere supporto su imprese, lavoratori, consulenti o prestazioni."
+    answer: "Sì, la sezione appuntamenti permette di scegliere ufficio, giorno e fascia oraria per ricevere supporto su imprese, lavoratori, consulenti o prestazioni."
   },
   {
     question: "Come ricevo comunicazioni su circolari e scadenze?",
@@ -349,8 +349,8 @@ export const faqs = [
 
 export const practices = [
   { id: "PR-2048", title: "Iscrizione nuova impresa", status: "In istruttoria", owner: "Impresa demo", due: "2026-05-30" },
-  { id: "PR-1984", title: "DURC e verifica regolarita", status: "Completata", owner: "Studio Demo", due: "2026-05-22" },
-  { id: "PR-1932", title: "Congruita cantiere Via Roma", status: "Da integrare", owner: "Impresa demo", due: "2026-06-04" },
+  { id: "PR-1984", title: "DURC e verifica regolarità", status: "Completata", owner: "Studio Demo", due: "2026-05-22" },
+  { id: "PR-1932", title: "Congruità cantiere Via Roma", status: "Da integrare", owner: "Impresa demo", due: "2026-06-04" },
   { id: "PR-1881", title: "Richiesta attestazione versamenti", status: "In lavorazione", owner: "Studio Demo", due: "2026-05-28" }
 ];
 
@@ -358,7 +358,7 @@ export const notifications = [
   "Nuova circolare contributiva disponibile dal 18 maggio.",
   "La pratica PR-1932 richiede un allegato integrativo.",
   "Appuntamento confermato: Sportello imprese, 29 maggio, ore 10:30.",
-  "Documento DURC demo disponibile in area documenti."
+  "Documento DURC disponibile in area documenti."
 ];
 
 export const categories = Array.from(new Set(documents.map((document) => document.category))).sort();

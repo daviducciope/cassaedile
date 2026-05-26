@@ -17,7 +17,7 @@ export function AssistanceFlow() {
             </div>
             <h2 className="mt-5 text-2xl font-bold">Richiesta inviata</h2>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Ticket demo CE-5821 creato. Lo stato iniziale e "Presa in carico".
+              Ticket dimostrativo CE-5821 creato. Lo stato iniziale è "Presa in carico".
             </p>
             <Button type="button" variant="outline" className="mt-6" onClick={() => setSubmitted(false)}>
               Apri una nuova richiesta
@@ -35,14 +35,14 @@ export function AssistanceFlow() {
               <FieldLabel>Tipologia richiesta</FieldLabel>
               <Select className="mt-2" defaultValue="Pratiche e documenti">
                 <option>Pratiche e documenti</option>
-                <option>DURC e regolarita</option>
+                <option>DURC e regolarità</option>
                 <option>Prestazioni lavoratori</option>
                 <option>Problema area riservata</option>
               </Select>
             </div>
             <div>
               <FieldLabel>Oggetto</FieldLabel>
-              <Input className="mt-2" placeholder="Esempio: integrazione pratica congruita" required />
+              <Input className="mt-2" placeholder="Esempio: integrazione pratica congruità" required />
             </div>
             <div>
               <FieldLabel>Email di contatto</FieldLabel>
@@ -58,20 +58,20 @@ export function AssistanceFlow() {
             </div>
             <Button type="submit">
               <Send className="h-4 w-4" aria-hidden="true" />
-              Invia richiesta demo
+              Invia richiesta
             </Button>
           </form>
         )}
       </Card>
 
       <Card className="p-6">
-        <h2 className="text-xl font-bold">Stato richieste demo</h2>
+        <h2 className="text-xl font-bold">Stato richieste</h2>
         <div className="mt-4 grid gap-3">
           {[
             ["CE-5818", "Verifica allegato DURC", "Completata", "green"],
             ["CE-5819", "Domanda rimborso lavoratore", "In lavorazione", "blue"],
             ["CE-5820", "Delega consulente", "Presa in carico", "amber"],
-            submitted ? ["CE-5821", "Nuova richiesta demo", "Presa in carico", "amber"] : null
+            submitted ? ["CE-5821", "Nuova richiesta", "Presa in carico", "amber"] : null
           ]
             .filter(Boolean)
             .map((ticket) => (

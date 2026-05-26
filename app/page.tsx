@@ -78,10 +78,10 @@ export default function HomePage() {
       <section className="container-shell py-10">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <p className="text-sm font-semibold uppercase text-primary">Perche questa piattaforma</p>
+            <p className="text-sm font-semibold uppercase text-primary">Perché questa piattaforma</p>
             <h2 className="mt-2 text-3xl font-bold">Dal sito informativo a uno sportello digitale operativo</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
-              La demo mostra come una Cassa Edile puo organizzare servizi, documenti e pratiche intorno ai bisogni
+              La demo mostra come una Cassa Edile può organizzare servizi, documenti e pratiche intorno ai bisogni
               reali degli utenti e al lavoro quotidiano degli uffici.
             </p>
           </div>

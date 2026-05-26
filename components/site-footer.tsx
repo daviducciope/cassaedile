@@ -28,23 +28,23 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-semibold">Contatti istituzionali</p>
+          <p className="text-sm font-semibold">Dati istituzionali configurabili</p>
           <div className="mt-3 grid gap-2 text-sm leading-6 text-muted-foreground">
             <p className="flex gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <span>Sede demo: Via Roma 12, 00000 Provincia</span>
+              <span>Sede configurabile per ogni Cassa Edile</span>
             </p>
             <p className="flex gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <span>Telefono: 000 0000000</span>
+              <span>Telefono e sportelli configurabili</span>
             </p>
             <p className="flex gap-2">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <span>PEC: cassaedile@pec.demo.it</span>
+              <span>PEC istituzionale configurabile</span>
             </p>
             <p className="flex gap-2">
               <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <span>Orari: lun-ven 9:00-13:00</span>
+              <span>Orari e sedi operative configurabili</span>
             </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-muted-foreground">

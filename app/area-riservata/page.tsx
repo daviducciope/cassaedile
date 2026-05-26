@@ -7,7 +7,7 @@ export default function AreaRiservataPage() {
       <SectionHeader
         eyebrow="Area riservata"
         title="Dashboard dimostrativa per imprese e consulenti"
-        description="Accesso simulato, pratiche, documenti disponibili, notifiche e stato richieste in una vista operativa."
+        description="Qui l'impresa vede pratiche aperte, documenti disponibili, scadenze e richieste: una vista pensata per ridurre telefonate e richieste ripetitive agli uffici."
       />
       <div className="mt-8">
         <ReservedArea />

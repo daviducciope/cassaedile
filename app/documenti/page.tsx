@@ -6,8 +6,8 @@ export default function DocumentiPage() {
     <div className="container-shell py-10">
       <SectionHeader
         eyebrow="Ricerca"
-        title="Ricerca documentale simulata"
-        description="La demo mostra una ricerca rapida su moduli, guide, normative e schede operative, con risultati ordinati per rilevanza."
+        title="Ricerca documentale intelligente"
+        description="Documenti consigliati all'apertura e risultati mirati per DURC, ferie, congruità, rimborsi e altri bisogni operativi."
       />
       <div className="mt-8">
         <DocumentSearch />

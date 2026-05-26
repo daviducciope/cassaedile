@@ -6,40 +6,35 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/documenti/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/assistenza/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/assistenza/page.js"
+      "static/chunks/app/documenti/page.js"
     ],
     "/area-riservata/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/area-riservata/page.js"
     ],
-    "/documenti/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/documenti/page.js"
+      "static/chunks/app/page.js"
     ],
     "/modulistica/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/modulistica/page.js"
     ],
-    "/consulenti/page": [
+    "/wizard-nuova-impresa/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/consulenti/page.js"
+      "static/chunks/app/wizard-nuova-impresa/page.js"
     ],
-    "/lavoratori/page": [
+    "/news/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/lavoratori/page.js"
+      "static/chunks/app/news/page.js"
     ]
   }
 }
