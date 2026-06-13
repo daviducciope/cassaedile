@@ -21,13 +21,13 @@ export const services = [
   {
     title: "DURC e regolarità",
     audience: "Imprese",
-    description: "Informazioni operative su verifica, documenti richiesti e stato pratica.",
+    description: "Informazioni operative su verifica, documenti richiesti, versamenti e stato pratica.",
     href: "/documenti"
   },
   {
     title: "Congruità manodopera",
     audience: "Consulenti",
-    description: "Schede e moduli per controllare le pratiche di congruità nei cantieri.",
+    description: "Schede e moduli per controllare le pratiche di congruità e i dati EdilConnect.",
     href: "/documenti"
   },
   {
@@ -73,21 +73,21 @@ export const documents: DemoDocument[] = [
   },
   {
     id: "doc-003",
-    title: "Dichiarazione congruità cantiere",
+    title: "Dichiarazione congruità cantiere EdilConnect",
     category: "Congruità",
     audience: ["Imprese", "Consulenti"],
-    description: "Modulo dimostrativo per la verifica di congruità della manodopera.",
-    tags: ["congruità", "cantiere", "manodopera"],
-    updatedAt: "2026-04-22",
+    description: "Scheda dimostrativa per verifica della manodopera, valore lavori e dati cantiere.",
+    tags: ["congruità", "cantiere", "manodopera", "edilconnect"],
+    updatedAt: "2026-06-10",
     status: "Aggiornato"
   },
   {
     id: "doc-004",
-    title: "Richiesta rimborso spese sanitarie",
+    title: "Richiesta rimborso spese sanitarie Sanedil",
     category: "Prestazioni",
     audience: ["Lavoratori"],
     description: "Domanda di rimborso con documentazione sanitaria da allegare.",
-    tags: ["rimborso", "sanitarie", "lavoratori"],
+    tags: ["rimborso", "sanitarie", "lavoratori", "sanedil"],
     updatedAt: "2026-03-19",
     status: "Aggiornato"
   },
@@ -103,12 +103,12 @@ export const documents: DemoDocument[] = [
   },
   {
     id: "doc-006",
-    title: "Denuncia mensile manodopera occupata",
+    title: "Denuncia mensile manodopera occupata MUT",
     category: "Denunce",
     audience: ["Imprese", "Consulenti"],
-    description: "Schema dati e istruzioni per la denuncia mensile dimostrativa.",
-    tags: ["denuncia", "mensile", "manodopera"],
-    updatedAt: "2026-04-30",
+    description: "Schema dati e istruzioni per denuncia mensile, ore, imponibili e lavoratori.",
+    tags: ["denuncia", "mensile", "manodopera", "mut"],
+    updatedAt: "2026-06-03",
     status: "In revisione"
   },
   {
@@ -143,11 +143,11 @@ export const documents: DemoDocument[] = [
   },
   {
     id: "doc-010",
-    title: "Domanda contributo studio figli",
+    title: "Domanda contributo studio figli e welfare",
     category: "Prestazioni",
     audience: ["Lavoratori"],
-    description: "Modulo per contributi scolastici e universitari a favore dei nuclei familiari.",
-    tags: ["studio", "contributo", "famiglia"],
+    description: "Modulo per contributi scolastici, universitari e welfare a favore dei nuclei familiari.",
+    tags: ["studio", "contributo", "famiglia", "welfare"],
     updatedAt: "2026-02-11",
     status: "Aggiornato"
   },
@@ -183,12 +183,22 @@ export const documents: DemoDocument[] = [
   },
   {
     id: "doc-014",
-    title: "Circolare aliquote contributive",
+    title: "Circolare aliquote contributive e tabelle salariali",
     category: "Normativa",
     audience: ["Imprese", "Consulenti"],
-    description: "Riepilogo dimostrativo di aliquote, decorrenze e principali novità operative.",
-    tags: ["aliquote", "contributi", "circolare"],
-    updatedAt: "2026-05-18",
+    description: "Riepilogo dimostrativo di aliquote, tabelle salariali, decorrenze e novità operative.",
+    tags: ["aliquote", "contributi", "circolare", "tabelle salariali"],
+    updatedAt: "2026-06-12",
+    status: "Nuovo"
+  },
+  {
+    id: "doc-021",
+    title: "Scheda fondi Prevedi e Fondapi",
+    category: "Previdenza",
+    audience: ["Lavoratori", "Imprese", "Consulenti"],
+    description: "Informazioni dimostrative su previdenza complementare, adesione e canali di supporto.",
+    tags: ["prevedi", "fondapi", "previdenza", "adesione"],
+    updatedAt: "2026-06-06",
     status: "Nuovo"
   },
   {
@@ -255,28 +265,28 @@ export const documents: DemoDocument[] = [
 
 export const news = [
   {
-    title: "Nuova guida digitale per l'iscrizione delle imprese",
-    date: "2026-05-20",
+    title: "Nuova guida digitale per l'iscrizione delle imprese molisane",
+    date: "2026-06-12",
     category: "Servizi",
     excerpt: "Disponibile il percorso guidato che riepiloga requisiti, moduli e prossime azioni."
   },
   {
-    title: "Aggiornamento circolare aliquote contributive",
-    date: "2026-05-18",
+    title: "Aggiornamento circolare aliquote contributive e tabelle salariali",
+    date: "2026-06-10",
     category: "Circolari",
     excerpt: "Pubblicata la scheda sintetica con le principali decorrenze operative."
   },
   {
     title: "Sportello digitale: nuove fasce per appuntamenti",
-    date: "2026-05-09",
+    date: "2026-06-07",
     category: "Appuntamenti",
     excerpt: "La prenotazione consente di selezionare ufficio, data e fascia oraria."
   },
   {
-    title: "Ricerca documentale: contenuti su DURC e congruità",
-    date: "2026-04-29",
+    title: "Ricerca documentale: contenuti su DURC, MUT e congruità",
+    date: "2026-06-04",
     category: "Documenti",
-    excerpt: "Le schede informative sono state organizzate per parole chiave e pubblico."
+    excerpt: "Le schede informative sono state organizzate per parole chiave, pubblico e adempimento."
   },
   {
     title: "Nuove FAQ per lavoratori e consulenti",
@@ -348,17 +358,17 @@ export const faqs = [
 ];
 
 export const practices = [
-  { id: "PR-2048", title: "Iscrizione nuova impresa", status: "In istruttoria", owner: "Impresa demo", due: "2026-05-30" },
-  { id: "PR-1984", title: "DURC e verifica regolarità", status: "Completata", owner: "Studio Demo", due: "2026-05-22" },
-  { id: "PR-1932", title: "Congruità cantiere Via Roma", status: "Da integrare", owner: "Impresa demo", due: "2026-06-04" },
-  { id: "PR-1881", title: "Richiesta attestazione versamenti", status: "In lavorazione", owner: "Studio Demo", due: "2026-05-28" }
+  { id: "PR-2048", title: "Iscrizione nuova impresa", status: "In istruttoria", owner: "Impresa demo", due: "2026-06-24" },
+  { id: "PR-1984", title: "DURC e verifica regolarità", status: "Completata", owner: "Studio Demo", due: "2026-06-17" },
+  { id: "PR-1932", title: "Congruità cantiere Campobasso", status: "Da integrare", owner: "Impresa demo", due: "2026-06-21" },
+  { id: "PR-1881", title: "Richiesta attestazione versamenti", status: "In lavorazione", owner: "Studio Demo", due: "2026-06-27" }
 ];
 
 export const notifications = [
-  "Nuova circolare contributiva disponibile dal 18 maggio.",
+  "Nuova circolare contributiva disponibile dal 10 giugno.",
   "La pratica PR-1932 richiede un allegato integrativo.",
-  "Appuntamento confermato: Sportello imprese, 29 maggio, ore 10:30.",
-  "Documento DURC disponibile in area documenti."
+  "Appuntamento confermato: Sportello imprese, 18 giugno, ore 10:30.",
+  "Documento DURC e scheda congruità disponibili in area documenti."
 ];
 
 export const categories = Array.from(new Set(documents.map((document) => document.category))).sort();

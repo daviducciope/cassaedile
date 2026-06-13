@@ -8,7 +8,8 @@ export default function ImpresePage() {
       description="Un percorso unico per iscrizione, regolarità, cantieri, versamenti, certificati e assistenza."
       highlights={[
         "Avvia iscrizione o aggiorna dati aziendali",
-        "Consulta documenti su DURC e regolarità contributiva",
+        "Consulta documenti su DURC, MUT e regolarità contributiva",
+        "Controlla pratiche di congruità e dati cantiere EdilConnect",
         "Monitora pratiche e scadenze in area riservata",
         "Apri richieste assistenza e prenota appuntamenti"
       ]}

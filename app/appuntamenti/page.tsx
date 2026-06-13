@@ -7,7 +7,7 @@ export default function AppuntamentiPage() {
       <SectionHeader
         eyebrow="Appuntamenti"
         title="Prenotazione appuntamento"
-        description="Selezione di ufficio, data e fascia oraria con conferma immediata lato frontend."
+        description="Selezione di ufficio, data e fascia oraria con conferma immediata per imprese, lavoratori, consulenti e prestazioni."
       />
       <div className="mt-8">
         <AppointmentBooking />

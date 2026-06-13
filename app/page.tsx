@@ -9,7 +9,9 @@ import {
   Files,
   HelpCircle,
   LogIn,
+  MapPin,
   Newspaper,
+  Phone,
   Search,
   UserRoundCog,
   UsersRound
@@ -19,18 +21,46 @@ import { Badge, Card, LinkButton } from "@/components/ui";
 import { news, services } from "@/data/demo";
 
 export default function HomePage() {
+  const sectorKeywords = ["DURC", "Congruità", "EdilConnect", "MUT", "Sanedil", "Prevedi", "Fondapi", "Tabelle contributive"];
+  const audienceCards = [
+    {
+      title: "Imprese",
+      href: "/imprese",
+      icon: Building2,
+      text: "Iscrizione, DURC, cantieri, versamenti, MUT e scadenze.",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80",
+      alt: "Tecnici in cantiere durante un controllo operativo"
+    },
+    {
+      title: "Lavoratori",
+      href: "/lavoratori",
+      icon: UsersRound,
+      text: "Prestazioni, rimborsi, ferie, Sanedil, Prevedi e posizione personale.",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
+      alt: "Lavoratore edile con dispositivi di protezione in cantiere"
+    },
+    {
+      title: "Consulenti",
+      href: "/consulenti",
+      icon: UserRoundCog,
+      text: "Deleghe, pratiche aziendali, congruità, modulistica e circolari.",
+      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      alt: "Ufficio tecnico con persone al lavoro su documenti"
+    }
+  ];
+
   return (
     <div>
       <section className="border-b bg-white">
         <div className="container-shell grid gap-8 py-10 lg:grid-cols-[1fr_0.92fr] lg:items-center">
           <div>
-            <Badge tone="amber">Cassa Edile Digitale - Demo riservata</Badge>
+            <Badge tone="amber">Cassa Edile del Molise - Demo riservata</Badge>
             <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-normal text-foreground md:text-5xl">
-              Servizi, documenti e pratiche della Cassa Edile in un unico punto.
+              Lo sportello digitale per imprese, lavoratori e consulenti.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Un ambiente dimostrativo per ridurre confusione, telefonate e tempi di gestione, con percorsi separati
-              per imprese, lavoratori e consulenti.
+              Una demo operativa pensata per la Cassa Edile del Molise: pratiche tracciate, documenti sempre
+              aggiornati, appuntamenti online e meno chiamate ripetitive agli uffici.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <LinkButton href="/area-riservata">
@@ -40,15 +70,33 @@ export default function HomePage() {
               <LinkButton href="/wizard-nuova-impresa" variant="outline">Avvia percorso impresa</LinkButton>
             </div>
           </div>
-          <div className="relative">
-            <Image
-              src="/platform-preview.svg"
-              width={1200}
-              height={780}
-              alt="Anteprima dashboard della piattaforma digitale"
-              priority
-              className="w-full rounded-lg border bg-white shadow-soft"
+          <div className="relative overflow-hidden rounded-lg border bg-white shadow-soft">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+              alt="Riunione operativa in ufficio tecnico"
+              className="h-[420px] w-full object-cover"
             />
+            <div className="absolute inset-x-4 bottom-4 rounded-lg border bg-white/95 p-4 shadow-soft backdrop-blur">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-12 w-32 shrink-0 items-center rounded-md border bg-white px-2">
+                    <Image
+                      src="/cassa-edile-molise-logo.jpeg"
+                      width={1134}
+                      height={306}
+                      alt="Cassa Edile del Molise"
+                      className="h-auto w-full"
+                      priority
+                    />
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold">Dashboard sportello digitale</p>
+                    <p className="text-xs text-muted-foreground">Pratiche, scadenze, documenti e richieste</p>
+                  </div>
+                </div>
+                <Badge tone="green">MVP presentabile</Badge>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -56,10 +104,10 @@ export default function HomePage() {
       <section className="border-b bg-secondary/60 py-6">
         <div className="container-shell grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {[
-            { label: "Accedi all'area riservata", href: "/area-riservata", icon: LogIn },
             { label: "Scarica modulistica", href: "/modulistica", icon: Files },
             { label: "Prenota appuntamento", href: "/appuntamenti", icon: CalendarDays },
-            { label: "Cerca documenti", href: "/documenti", icon: Search }
+            { label: "Cerca documenti", href: "/documenti", icon: Search },
+            { label: "Apri assistenza", href: "/assistenza", icon: HelpCircle }
           ].map((item) => (
             <Link
               key={item.href}
@@ -75,6 +123,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-b bg-white py-6">
+        <div className="container-shell">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase text-primary">Termini riconoscibili dagli uffici</p>
+              <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                La demo usa il linguaggio operativo che imprese, consulenti e lavoratori cercano ogni giorno.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {sectorKeywords.map((item) => (
+                <Badge key={item} tone="blue">{item}</Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container-shell py-10">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
@@ -84,6 +150,13 @@ export default function HomePage() {
               La demo mostra come una Cassa Edile può organizzare servizi, documenti e pratiche intorno ai bisogni
               reali degli utenti e al lavoro quotidiano degli uffici.
             </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {["Meno chiamate ripetitive", "Pratiche tracciate", "Documenti aggiornati"].map((item) => (
+                <div key={item} className="rounded-md border bg-white p-3 text-sm font-bold shadow-sm">
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             <Card className="p-5">
@@ -126,19 +199,18 @@ export default function HomePage() {
 
       <section className="container-shell py-10">
         <div className="grid gap-4 md:grid-cols-3">
-          {[
-            { title: "Imprese", href: "/imprese", icon: Building2, text: "Iscrizione, DURC, cantieri, versamenti e scadenze." },
-            { title: "Lavoratori", href: "/lavoratori", icon: UsersRound, text: "Prestazioni, rimborsi, ferie, posizione personale." },
-            { title: "Consulenti", href: "/consulenti", icon: UserRoundCog, text: "Deleghe, pratiche aziendali, modulistica e circolari." }
-          ].map((item) => (
+          {audienceCards.map((item) => (
             <Link key={item.href} href={item.href} className="group">
-              <Card className="h-full p-5 transition group-hover:-translate-y-0.5 group-hover:border-primary">
-                <item.icon className="h-7 w-7 text-primary" aria-hidden="true" />
-                <h2 className="mt-4 text-xl font-bold">{item.title}</h2>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                  Vai al percorso <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </span>
+              <Card className="h-full overflow-hidden transition group-hover:-translate-y-0.5 group-hover:border-primary">
+                <img src={item.image} alt={item.alt} className="h-36 w-full object-cover" />
+                <div className="p-5">
+                  <item.icon className="h-7 w-7 text-primary" aria-hidden="true" />
+                  <h2 className="mt-4 text-xl font-bold">{item.title}</h2>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                    Vai al percorso <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </div>
               </Card>
             </Link>
           ))}
@@ -163,6 +235,22 @@ export default function HomePage() {
             Avvia guida rapida
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </LinkButton>
+        </div>
+      </section>
+
+      <section className="container-shell py-10">
+        <div className="grid gap-4 lg:grid-cols-[1fr_1fr_1fr]">
+          {[
+            { icon: MapPin, title: "Sede e sportelli", text: "Campobasso come riferimento demo, con sedi territoriali e orari configurabili." },
+            { icon: Phone, title: "Contatto unico", text: "Telefono, PEC e richieste online nello stesso punto, con smistamento agli uffici." },
+            { icon: CalendarDays, title: "Appuntamenti", text: "Prenotazione per imprese, lavoratori, consulenti, prestazioni e pratiche da integrare." }
+          ].map((item) => (
+            <Card key={item.title} className="p-5">
+              <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+              <h2 className="mt-4 text-lg font-bold">{item.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
+            </Card>
+          ))}
         </div>
       </section>
 

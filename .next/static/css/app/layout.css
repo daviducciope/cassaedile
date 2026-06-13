@@ -514,6 +514,13 @@ video {
 .sticky {
   position: sticky;
 }
+.inset-x-4 {
+  left: 1rem;
+  right: 1rem;
+}
+.bottom-4 {
+  bottom: 1rem;
+}
 .left-3 {
   left: 0.75rem;
 }
@@ -605,17 +612,29 @@ video {
 .h-2 {
   height: 0.5rem;
 }
+.h-36 {
+  height: 9rem;
+}
 .h-4 {
   height: 1rem;
 }
 .h-5 {
   height: 1.25rem;
 }
+.h-56 {
+  height: 14rem;
+}
 .h-6 {
   height: 1.5rem;
 }
 .h-7 {
   height: 1.75rem;
+}
+.h-\[420px\] {
+  height: 420px;
+}
+.h-auto {
+  height: auto;
 }
 .h-full {
   height: 100%;
@@ -637,6 +656,12 @@ video {
 }
 .w-12 {
   width: 3rem;
+}
+.w-24 {
+  width: 6rem;
+}
+.w-32 {
+  width: 8rem;
 }
 .w-4 {
   width: 1rem;
@@ -664,6 +689,9 @@ video {
 }
 .max-w-3xl {
   max-width: 48rem;
+}
+.max-w-64 {
+  max-width: 16rem;
 }
 .max-w-xl {
   max-width: 36rem;
@@ -838,6 +866,13 @@ video {
 .bg-white\/95 {
   background-color: rgb(255 255 255 / 0.95);
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-2 {
+  padding: 0.5rem;
+}
 .p-3 {
   padding: 0.75rem;
 }
@@ -853,6 +888,10 @@ video {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .px-2\.5 {
   padding-left: 0.625rem;
@@ -1268,12 +1307,20 @@ textarea {
     grid-template-columns: 1fr 1fr;
   }
 
+  .lg\:grid-cols-\[1fr_1fr_1fr\] {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
 
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 }
 

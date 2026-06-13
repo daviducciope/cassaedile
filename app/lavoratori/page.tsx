@@ -8,7 +8,8 @@ export default function LavoratoriPage() {
       description="Un percorso semplice per capire cosa chiedere, quale modulo usare e come parlare con lo sportello."
       highlights={[
         "Chiedi un rimborso o un contributo",
-        "Vedi informazioni su ferie e gratifica",
+        "Vedi informazioni su ferie, gratifica e posizione personale",
+        "Consulta schede Sanedil, Prevedi e Fondapi",
         "Scarica documenti personali e moduli",
         "Prenota un contatto con lo sportello lavoratori"
       ]}

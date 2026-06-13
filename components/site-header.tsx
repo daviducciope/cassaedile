@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Building2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +13,7 @@ const links = [
   { href: "/consulenti", label: "Consulenti" },
   { href: "/modulistica", label: "Modulistica" },
   { href: "/documenti", label: "Documenti" },
+  { href: "/contatti", label: "Contatti" },
   { href: "/area-riservata", label: "Area riservata" }
 ];
 
@@ -23,12 +25,19 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur">
       <div className="container-shell flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex min-w-0 items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <Building2 className="h-5 w-5" aria-hidden="true" />
+          <span className="flex h-10 w-24 shrink-0 items-center justify-center rounded-md border bg-white px-2">
+            <Image
+              src="/cassa-edile-molise-logo.jpeg"
+              width={1134}
+              height={306}
+              alt="Cassa Edile del Molise"
+              className="h-auto w-full"
+              priority
+            />
           </span>
           <span className="min-w-0">
-            <span className="block truncate text-base font-bold leading-tight">Cassa Edile Digitale</span>
-            <span className="block truncate text-xs text-muted-foreground">Ambiente dimostrativo</span>
+            <span className="block truncate text-base font-bold leading-tight">Cassa Edile Molise</span>
+            <span className="block truncate text-xs text-muted-foreground">Sportello digitale demo</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">

@@ -7,7 +7,7 @@ export default function ModulisticaPage() {
       <SectionHeader
         eyebrow="Modulistica"
         title="Moduli filtrabili per pubblico e categoria"
-        description="Una raccolta statica ma credibile di moduli, guide e circolari, pensata per simulare un CMS documentale."
+        description="Una raccolta statica ma credibile di moduli, guide e circolari su DURC, congruità, MUT, prestazioni, Sanedil, Prevedi/Fondapi e tabelle contributive."
       />
       <div className="mt-8">
         <ModuliBrowser />

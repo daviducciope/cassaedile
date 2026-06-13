@@ -1,7 +1,4 @@
 {
   "/page": "app/page.js",
-  "/modulistica/page": "app/modulistica/page.js",
-  "/wizard-nuova-impresa/page": "app/wizard-nuova-impresa/page.js",
-  "/documenti/page": "app/documenti/page.js",
-  "/news/page": "app/news/page.js"
+  "/documenti/page": "app/documenti/page.js"
 }

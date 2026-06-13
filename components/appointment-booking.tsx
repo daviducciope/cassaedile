@@ -4,10 +4,31 @@ import { useState } from "react";
 import { CalendarCheck2 } from "lucide-react";
 import { Badge, Button, Card, FieldLabel, Select } from "@/components/ui";
 
-const days = ["2026-05-28", "2026-05-29", "2026-06-03", "2026-06-05"];
 const slots = ["09:00", "10:30", "12:00", "15:00"];
 
+function getUpcomingBusinessDays() {
+  const formatter = new Intl.DateTimeFormat("sv-SE", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  });
+  const days: string[] = [];
+  const cursor = new Date();
+  cursor.setDate(cursor.getDate() + 1);
+
+  while (days.length < 5) {
+    const dayOfWeek = cursor.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+      days.push(formatter.format(cursor));
+    }
+    cursor.setDate(cursor.getDate() + 1);
+  }
+
+  return days;
+}
+
 export function AppointmentBooking() {
+  const days = getUpcomingBusinessDays();
   const [office, setOffice] = useState("Sportello imprese");
   const [day, setDay] = useState(days[1]);
   const [slot, setSlot] = useState(slots[1]);
@@ -28,6 +49,7 @@ export function AppointmentBooking() {
               <option>Sportello lavoratori</option>
               <option>Supporto consulenti</option>
               <option>Area prestazioni</option>
+              <option>DURC, MUT e congruità</option>
             </Select>
           </div>
           <div>

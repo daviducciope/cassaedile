@@ -9,7 +9,8 @@ export default function ConsulentiPage() {
       highlights={[
         "Gestisci deleghe e pratiche per imprese assistite",
         "Filtra moduli per adempimento e categoria",
-        "Consulta circolari e scadenze contributive",
+        "Consulta circolari, aliquote e tabelle salariali",
+        "Accedi rapidamente a DURC, congruità, EdilConnect e MUT",
         "Apri ticket tecnici su pratiche e documenti"
       ]}
     />
