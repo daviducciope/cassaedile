@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cassa Edile Molise - Presentazione sportello digitale</title>
+    <style>
+      :root {
+        --navy: #0b2a5b;
+        --ink: #0b1220;
+        --blue: #2ea6ff;
+        --sky: #7bc5ff;
+        --paper: #f6f8fb;
+        --white: #ffffff;
+        --muted: #64748b;
+        --line: rgba(11, 42, 91, 0.16);
+        --green: #1f8a5b;
+        --amber: #f2a81d;
+      }
+
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #d8dee8;
+        color: var(--ink);
+        font-family:
+          "Plus Jakarta Sans",
+          "Inter",
+          "Segoe UI",
+          Arial,
+          sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        counter-reset: slide;
+      }
+
+      .deck {
+        width: 100%;
+      }
+
+      .slide {
+        position: relative;
+        display: grid;
+        width: 13.333in;
+        height: 7.5in;
+        margin: 0 auto 20px;
+        overflow: hidden;
+        background: var(--paper);
+        page-break-after: always;
+        counter-increment: slide;
+      }
+
+      .slide::after {
+        content: counter(slide, decimal-leading-zero);
+        position: absolute;
+        right: 0.48in;
+        bottom: 0.34in;
+        color: rgba(11, 42, 91, 0.38);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .dark {
+        background:
+          radial-gradient(circle at 86% 16%, rgba(46, 166, 255, 0.2), transparent 28%),
+          linear-gradient(135deg, #06152f 0%, var(--navy) 52%, #071326 100%);
+        color: var(--white);
+      }
+
+      .dark::after {
+        color: rgba(255, 255, 255, 0.46);
+      }
+
+      .pad {
+        padding: 0.58in 0.7in;
+      }
+
+      .split {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 0.42in;
+        align-items: stretch;
+      }
+
+      .topbar {
+        position: absolute;
+        top: 0.36in;
+        left: 0.58in;
+        right: 0.58in;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        z-index: 5;
+      }
+
+      .logo-cassa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.1in;
+        height: 0.62in;
+        padding: 0.08in 0.14in;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .logo-cassa img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .logo-sta {
+        display: block;
+        width: 0.8in;
+        height: auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .dark .eyebrow {
+        color: var(--sky);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 8.2in;
+        font-size: 64px;
+        line-height: 0.97;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        max-width: 7.7in;
+        font-size: 44px;
+        line-height: 1.02;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        font-size: 22px;
+        line-height: 1.12;
+        font-weight: 900;
+      }
+
+      .lead {
+        max-width: 6.8in;
+        margin-top: 22px;
+        color: #dbeafe;
+        font-size: 20px;
+        line-height: 1.46;
+        font-weight: 500;
+      }
+
+      .light-lead {
+        max-width: 6.8in;
+        margin-top: 18px;
+        color: #415169;
+        font-size: 18px;
+        line-height: 1.45;
+        font-weight: 500;
+      }
+
+      .hero {
+        align-content: center;
+        padding: 1.05in 0.7in 0.64in;
+      }
+
+      .hero-title span {
+        color: var(--sky);
+      }
+
+      .hero-mark {
+        position: absolute;
+        right: -0.3in;
+        bottom: -0.7in;
+        color: rgba(255, 255, 255, 0.055);
+        font-size: 260px;
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+      }
+
+      .cover-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 0.42in;
+        max-width: 7.6in;
+      }
+
+      .mini-card {
+        min-height: 0.86in;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .mini-card strong {
+        display: block;
+        font-size: 13px;
+        line-height: 1.15;
+        color: var(--white);
+      }
+
+      .mini-card span {
+        display: block;
+        margin-top: 8px;
+        color: #cbd5e1;
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 18px 54px rgba(11, 42, 91, 0.08);
+      }
+
+      .panel.dark-panel {
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+      }
+
+      .analysis-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .analysis-item {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .num {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: var(--navy);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .analysis-item p,
+      .text-block p,
+      .caption {
+        color: #536176;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .palette {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .swatch {
+        min-height: 1.2in;
+        padding: 14px;
+        border-radius: 8px;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .swatch.light {
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+
+      .swatch strong {
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .swatch span {
+        margin-top: 5px;
+        font-size: 11px;
+        font-weight: 700;
+        opacity: 0.8;
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .stat {
+        padding: 18px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .stat b {
+        display: block;
+        color: var(--navy);
+        font-size: 38px;
+        line-height: 1;
+        font-weight: 900;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 10px;
+        color: #536176;
+        font-size: 13px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .journey {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .journey-card {
+        min-height: 3.45in;
+        padding: 22px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .journey-card .tag {
+        display: inline-flex;
+        padding: 7px 10px;
+        border-radius: 6px;
+        background: rgba(46, 166, 255, 0.13);
+        color: var(--navy);
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .journey-card ul,
+      .roadmap ul,
+      .feature-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .journey-card li,
+      .feature-list li,
+      .roadmap li {
+        position: relative;
+        margin-top: 11px;
+        padding-left: 19px;
+        color: #536176;
+        font-size: 14px;
+        line-height: 1.36;
+      }
+
+      .journey-card li::before,
+      .feature-list li::before,
+      .roadmap li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+
+      .mockup {
+        padding: 22px;
+        align-self: center;
+      }
+
+      .browser {
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .browser-bar {
+        display: flex;
+        gap: 7px;
+        padding: 12px;
+        background: rgba(11, 18, 32, 0.34);
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+
+      .browser-body {
+        padding: 20px;
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .dashboard-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 18px 0;
+      }
+
+      .dash-tile {
+        min-height: 0.78in;
+        padding: 12px;
+        border-radius: 8px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .dash-tile b {
+        display: block;
+        color: var(--navy);
+        font-size: 24px;
+      }
+
+      .dash-tile span {
+        display: block;
+        margin-top: 5px;
+        color: #536176;
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .table {
+        display: grid;
+        gap: 8px;
+      }
+
+      .table-row {
+        display: grid;
+        grid-template-columns: 0.9fr 1.8fr 1fr 0.9fr;
+        gap: 8px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 7px;
+        background: var(--paper);
+        color: #334155;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .pill {
+        display: inline-flex;
+        justify-content: center;
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: rgba(46, 166, 255, 0.16);
+        color: var(--navy);
+        font-size: 10px;
+        font-weight: 900;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr 1fr;
+        gap: 1px;
+        margin-top: 28px;
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--line);
+      }
+
+      .cell {
+        min-height: 0.76in;
+        padding: 15px;
+        background: var(--white);
+        font-size: 13px;
+        line-height: 1.34;
+      }
+
+      .cell.head {
+        background: var(--navy);
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cell strong {
+        display: block;
+        color: var(--navy);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .roadmap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .phase {
+        min-height: 3.2in;
+        padding: 18px;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--line);
+      }
+
+      .phase-number {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .phase h3 {
+        margin-top: 16px;
+        font-size: 19px;
+      }
+
+      .quote {
+        display: grid;
+        place-items: center;
+        padding: 1in;
+        text-align: center;
+      }
+
+      .quote h2 {
+        max-width: 8.9in;
+        margin: 0 auto;
+        font-size: 58px;
+      }
+
+      .quote p {
+        max-width: 7.6in;
+        margin: 24px auto 0;
+        color: #dbeafe;
+        font-size: 20px;
+        line-height: 1.45;
+      }
+
+      .footer-note {
+        position: absolute;
+        left: 0.7in;
+        bottom: 0.35in;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .light .footer-note {
+        color: rgba(11, 42, 91, 0.5);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 0.38in;
+        align-items: start;
+      }
+
+      .text-block {
+        padding: 22px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        margin-bottom: 16px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: rgba(46, 166, 255, 0.12);
+        color: var(--navy);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .service {
+        min-height: 1.55in;
+        padding: 18px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .service b {
+        display: block;
+        margin-bottom: 9px;
+        color: var(--navy);
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .service span {
+        color: #536176;
+        font-size: 13px;
+        line-height: 1.38;
+      }
+
+      @media print {
+        html,
+        body {
+          width: 13.333in;
+          background: white;
+        }
+
+        .slide {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="deck">
+      <section class="slide dark hero">
+        <div class="topbar">
+          <div class="logo-cassa"><img src="../public/cassa-edile-molise-logo.jpeg" alt="Cassa Edile del Molise" /></div>
+          <img class="logo-sta" src="../public/sta-bianco.png" alt="stà comunicazione & design" />
+        </div>
+        <div>
+          <p class="eyebrow">Presentazione strategica - sportello digitale</p>
+          <h1 class="hero-title">Diamo forma allo <span>sportello</span> che sta al lavoro.</h1>
+          <p class="lead">
+            Analisi e proposta di comunicazione per trasformare la demo Cassa Edile Molise in una piattaforma chiara,
+            credibile e utile per imprese, lavoratori e consulenti.
+          </p>
+          <div class="cover-grid">
+            <div class="mini-card"><strong>Identità</strong><span>Logo Cassa Edile e palette ispirata a stà.</span></div>
+            <div class="mini-card"><strong>Metodo</strong><span>Percorsi per pubblico, non menu generici.</span></div>
+            <div class="mini-card"><strong>Servizi</strong><span>Pratiche, moduli, appuntamenti e assistenza.</span></div>
+            <div class="mini-card"><strong>Risultato</strong><span>Meno attrito e meno richieste ripetitive.</span></div>
+          </div>
+        </div>
+        <div class="hero-mark">stà</div>
+        <div class="footer-note">Cassa Edile Molise - demo riservata</div>
+      </section>
+
+      <section class="slide light pad">
+        <p class="eyebrow">Analisi del riferimento visivo</p>
+        <h2>Il sito stà comunica con una grammatica precisa.</h2>
+        <p class="light-lead">
+          L'identità di stacomunicazionedesign.it lavora su contrasti forti, copy diretto e sistemi visivi ordinati:
+          non decora, orienta. Questa logica viene tradotta qui in chiave istituzionale.
+        </p>
+        <div class="analysis-list">
+          <div class="analysis-item">
+            <div class="num">01</div>
+            <div>
+              <h3>Headline brevi, memorabili</h3>
+              <p>Frasi assertive, ritmo spezzato e parole chiave isolate. La presentazione usa titoli netti e leggibili anche a distanza.</p>
+            </div>
+          </div>
+          <div class="analysis-item">
+            <div class="num">02</div>
+            <div>
+              <h3>Contrasto tra istituzionale e digitale</h3>
+              <p>Blu profondo, accento azzurro e fondi chiari danno autorevolezza senza sembrare freddi o burocratici.</p>
+            </div>
+          </div>
+          <div class="analysis-item">
+            <div class="num">03</div>
+            <div>
+              <h3>Metodo prima dell'effetto</h3>
+              <p>La comunicazione mette in evidenza problemi, obiettivi e risultati. Ogni slide ha una funzione commerciale precisa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="palette">
+          <div class="swatch" style="background: #0b2a5b"><strong>Blu identità</strong><span>#0B2A5B</span></div>
+          <div class="swatch" style="background: #2ea6ff"><strong>Azzurro azione</strong><span>#2EA6FF</span></div>
+          <div class="swatch" style="background: #0b1220"><strong>Inchiostro</strong><span>#0B1220</span></div>
+          <div class="swatch light" style="background: #f6f8fb"><strong>Fondo chiaro</strong><span>#F6F8FB</span></div>
+        </div>
+      </section>
+
+      <section class="slide pad split">
+        <div>
+          <p class="eyebrow">Diagnosi del progetto</p>
+          <h2>La demo ha già la sostanza. Serve renderla immediata.</h2>
+          <p class="light-lead">
+            Il sito locale contiene già pagine, servizi e componenti coerenti: area riservata, modulistica, documenti,
+            appuntamenti, assistenza e percorsi per target. La presentazione li riorganizza come proposta di valore.
+          </p>
+          <div class="stat-grid">
+            <div class="stat"><b>3</b><span>pubblici principali: imprese, lavoratori, consulenti</span></div>
+            <div class="stat"><b>6</b><span>servizi rapidi già leggibili nella demo</span></div>
+            <div class="stat"><b>20+</b><span>documenti e schede dimostrative organizzabili</span></div>
+          </div>
+        </div>
+        <div class="panel text-block">
+          <span class="kicker">Lettura strategica</span>
+          <h3>Il punto non è "avere un sito".</h3>
+          <p style="margin-top: 14px">
+            Per una Cassa Edile, il valore nasce quando l'utente capisce dove andare, quale modulo serve,
+            cosa deve allegare e come seguire l'avanzamento della pratica.
+          </p>
+          <ul class="feature-list">
+            <li>Menu e contenuti devono partire dal pubblico, non dagli uffici interni.</li>
+            <li>Le procedure ricorrenti vanno guidate con percorsi e filtri.</li>
+            <li>L'area riservata deve diventare il luogo naturale per stato pratiche e notifiche.</li>
+            <li>La comunicazione deve ridurre telefonate, PEC duplicate e richieste incomplete.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slide dark pad split">
+        <div>
+          <p class="eyebrow">Problema da risolvere</p>
+          <h2>Quando tutto è importante, l'utente non trova niente.</h2>
+          <p class="lead">
+            DURC, congruità, MUT, Sanedil, Prevedi, Fondapi, versamenti, ferie e scadenze sono parole familiari agli
+            uffici. Per l'utente diventano chiare solo se inserite in un percorso.
+          </p>
+        </div>
+        <div class="panel dark-panel text-block">
+          <span class="kicker" style="background: rgba(255,255,255,.12); color: #fff">Attriti ricorrenti</span>
+          <ul class="feature-list">
+            <li style="color:#dbeafe">Informazioni cercate da pubblici diversi nello stesso spazio.</li>
+            <li style="color:#dbeafe">Modulistica percepita come archivio, non come strumento operativo.</li>
+            <li style="color:#dbeafe">Richieste agli uffici ripetute per dubbi semplici e stato pratiche.</li>
+            <li style="color:#dbeafe">Utenti che arrivano alla PEC senza sapere allegati, tempi e passaggi.</li>
+            <li style="color:#dbeafe">Servizi digitali presenti ma non raccontati come vantaggio concreto.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slide light pad">
+        <p class="eyebrow">Architettura proposta</p>
+        <h2>Tre porte d'ingresso. Una piattaforma unica.</h2>
+        <p class="light-lead">
+          La demo deve dichiarare subito a chi parla. Ogni pubblico ha bisogni, linguaggio e priorità diverse:
+          separare i percorsi semplifica il primo accesso e rende più efficiente il lavoro degli uffici.
+        </p>
+        <div class="journey">
+          <div class="journey-card">
+            <span class="tag">Imprese</span>
+            <h3 style="margin-top:18px">Adempimenti senza dispersione</h3>
+            <ul>
+              <li>Iscrizione e variazioni aziendali.</li>
+              <li>DURC, regolarità e versamenti.</li>
+              <li>Cantieri, congruità ed EdilConnect.</li>
+              <li>Scadenze e documenti in dashboard.</li>
+            </ul>
+          </div>
+          <div class="journey-card">
+            <span class="tag">Lavoratori</span>
+            <h3 style="margin-top:18px">Prestazioni spiegate bene</h3>
+            <ul>
+              <li>Rimborsi, contributi e welfare.</li>
+              <li>Ferie, gratifica e posizione personale.</li>
+              <li>Sanedil, Prevedi e Fondapi.</li>
+              <li>Appuntamenti con lo sportello giusto.</li>
+            </ul>
+          </div>
+          <div class="journey-card">
+            <span class="tag">Consulenti</span>
+            <h3 style="margin-top:18px">Strumenti per lavorare meglio</h3>
+            <ul>
+              <li>Deleghe e pratiche aziende assistite.</li>
+              <li>Circolari, aliquote e tabelle salariali.</li>
+              <li>Ricerca documentale per adempimento.</li>
+              <li>Ticket tecnici e integrazioni.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide dark pad split">
+        <div>
+          <p class="eyebrow">Esperienza chiave</p>
+          <h2>La dashboard deve far capire cosa succede adesso.</h2>
+          <p class="lead">
+            Non basta un login. L'area riservata deve mostrare stato pratiche, scadenze, documenti, notifiche e azioni
+            rapide nello stesso ambiente.
+          </p>
+          <ul class="feature-list" style="margin-top: 26px">
+            <li style="color:#dbeafe">Pratiche aperte e stato aggiornato.</li>
+            <li style="color:#dbeafe">Documenti disponibili e richieste di integrazione.</li>
+            <li style="color:#dbeafe">Scadenze imminenti e notifiche operative.</li>
+            <li style="color:#dbeafe">Azioni rapide: carica documento, apri pratica, chiedi assistenza.</li>
+          </ul>
+        </div>
+        <div class="mockup">
+          <div class="browser">
+            <div class="browser-bar"><span class="dot"></span><span class="dot" style="opacity:.65"></span><span class="dot" style="opacity:.35"></span></div>
+            <div class="browser-body">
+              <p class="eyebrow" style="margin-bottom:8px">Area riservata</p>
+              <h3>Dashboard impresa</h3>
+              <div class="dashboard-row">
+                <div class="dash-tile"><b>4</b><span>Pratiche aperte</span></div>
+                <div class="dash-tile"><b>12</b><span>Documenti</span></div>
+                <div class="dash-tile"><b>3</b><span>Scadenze</span></div>
+                <div class="dash-tile"><b>2</b><span>Ticket</span></div>
+              </div>
+              <div class="table">
+                <div class="table-row"><span>CE-2401</span><span>Congruità cantiere</span><span class="pill">In verifica</span><span>18/06</span></div>
+                <div class="table-row"><span>CE-2398</span><span>DURC e regolarità</span><span class="pill">Da integrare</span><span>20/06</span></div>
+                <div class="table-row"><span>CE-2387</span><span>Delega consulente</span><span class="pill">Completata</span><span>--</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide light pad">
+        <p class="eyebrow">Funzioni da presentare</p>
+        <h2>Non feature isolate. Servizi che rispondono a bisogni reali.</h2>
+        <div class="service-grid">
+          <div class="service"><b>Modulistica filtrabile</b><span>Ricerca per pubblico, categoria e parola chiave: DURC, ferie, rimborso, congruità, MUT.</span></div>
+          <div class="service"><b>Documenti aggiornati</b><span>Schede operative con stato, data di aggiornamento, descrizione e tag riconoscibili.</span></div>
+          <div class="service"><b>Assistenza guidata</b><span>Ticket con oggetto, tipologia, email e stato richiesta per ridurre PEC generiche.</span></div>
+          <div class="service"><b>Appuntamenti online</b><span>Prenotazione per ufficio, giorno e fascia oraria con contesto della richiesta.</span></div>
+          <div class="service"><b>Nuova impresa</b><span>Wizard per iscrizione e primi adempimenti, utile anche come strumento consulenziale.</span></div>
+          <div class="service"><b>News e normative</b><span>Canale editoriale per circolari, scadenze, aliquote, tabelle e novità operative.</span></div>
+        </div>
+      </section>
+
+      <section class="slide light pad">
+        <p class="eyebrow">Messaggi commerciali</p>
+        <h2>Il racconto deve spostare il focus dal sito al servizio.</h2>
+        <div class="matrix">
+          <div class="cell head">Area</div>
+          <div class="cell head">Messaggio attuale da evitare</div>
+          <div class="cell head">Messaggio da usare</div>
+          <div class="cell"><strong>Home</strong></div>
+          <div class="cell">"Portale informativo con moduli e contatti".</div>
+          <div class="cell">"Lo sportello digitale che guida ogni utente verso il servizio corretto".</div>
+          <div class="cell"><strong>Area riservata</strong></div>
+          <div class="cell">"Accesso utente".</div>
+          <div class="cell">"Pratiche, scadenze e documenti sempre sotto controllo".</div>
+          <div class="cell"><strong>Modulistica</strong></div>
+          <div class="cell">"Archivio documenti".</div>
+          <div class="cell">"Trova il modulo giusto in base a chi sei e cosa devi fare".</div>
+          <div class="cell"><strong>Assistenza</strong></div>
+          <div class="cell">"Contattaci".</div>
+          <div class="cell">"Apri una richiesta tracciata e segui la presa in carico".</div>
+        </div>
+      </section>
+
+      <section class="slide light pad">
+        <p class="eyebrow">Roadmap</p>
+        <h2>Dal prototipo alla presentazione al cliente.</h2>
+        <div class="roadmap">
+          <div class="phase">
+            <div class="phase-number"><span>Fase 01</span><span>Audit</span></div>
+            <h3>Contenuti e priorità</h3>
+            <ul>
+              <li>Mappare servizi reali e modulistica.</li>
+              <li>Definire pubblici, uffici e flussi.</li>
+              <li>Selezionare le procedure più richieste.</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-number"><span>Fase 02</span><span>UX</span></div>
+            <h3>Percorsi guidati</h3>
+            <ul>
+              <li>Home orientata ai target.</li>
+              <li>Filtri per documenti e moduli.</li>
+              <li>Wizard e schede operative.</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-number"><span>Fase 03</span><span>UI</span></div>
+            <h3>Identità digitale</h3>
+            <ul>
+              <li>Palette STA adattata alla Cassa.</li>
+              <li>Componenti coerenti e accessibili.</li>
+              <li>Layout responsive per ufficio e mobile.</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-number"><span>Fase 04</span><span>MVP</span></div>
+            <h3>Demo presentabile</h3>
+            <ul>
+              <li>Area riservata dimostrativa.</li>
+              <li>Pratiche, notifiche e ticket.</li>
+              <li>PDF e pitch commerciale.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide dark quote">
+        <div class="topbar">
+          <div class="logo-cassa"><img src="../public/cassa-edile-molise-logo.jpeg" alt="Cassa Edile del Molise" /></div>
+          <img class="logo-sta" src="../public/sta-bianco.png" alt="stà comunicazione & design" />
+        </div>
+        <div>
+          <p class="eyebrow">Sintesi</p>
+          <h2>Una Cassa Edile digitale non deve solo informare. Deve togliere attrito.</h2>
+          <p>
+            La proposta mette ordine tra servizi, documenti e pratiche, con una comunicazione concreta e un'identità
+            visiva riconoscibile: autorevole, chiara, operativa.
+          </p>
+        </div>
+        <div class="footer-note">Palette e impianto visivo ispirati a stacomunicazionedesign.it - 13 giugno 2026</div>
+      </section>
+    </main>
+  </body>
+</html>
